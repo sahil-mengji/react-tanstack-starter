@@ -9,6 +9,7 @@ const queryClient = new QueryClient();
 
 // TanStack Router
 import { routeTree } from './routeTree.gen';
+
 const router = createRouter({
   routeTree
 });
