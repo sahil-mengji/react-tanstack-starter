@@ -1,3 +1,11 @@
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger
+} from '@/components/ui/sheet';
 import { createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/')({
@@ -5,5 +13,21 @@ export const Route = createFileRoute('/')({
 });
 
 function RouteComponent() {
-  return <div className="bg-blue-400 w-full h-full">Hello "/"!</div>;
+  return (
+    <div className=" w-full h-full ">
+      Hello "/"!
+      <Sheet>
+        <SheetTrigger>Open</SheetTrigger>
+        <SheetContent>
+          <SheetHeader>
+            <SheetTitle>Are you absolutely sure?</SheetTitle>
+            <SheetDescription>
+              This action cannot be undone. This will permanently delete your account and remove
+              your data from our servers.
+            </SheetDescription>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
+    </div>
+  );
 }
