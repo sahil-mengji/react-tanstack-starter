@@ -1,0 +1,7 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "jsx": "react-jsx" // React 17+ uses this
+  },
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+}
